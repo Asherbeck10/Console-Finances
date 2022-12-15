@@ -88,7 +88,7 @@ let
 ['Feb-2017', 671099]
 ];
 // Number of months
-let numberOfMonths =finances.length
+let numberOfMonths =finances.length;
 console.log("Total Months: "+numberOfMonths);
 
 //The net total amount of Profit/Losses over the entire period.
@@ -112,8 +112,26 @@ for (let i = 0; i < (finances.length-1); i++) {
     changeInProfitLoss=changeInProfitLoss+(finances[i+1][1]-finances[i][1]);
     
 };
- 
-averChangeInProfitLos=changeInProfitLoss/(finances.length)
- console.log(averChangeInProfitLos.toFixed(2));
 
- 
+ //The average of the **changes** in Profit/Losses over the entire period.
+let averageChangeInProfitLoss=changeInProfitLoss/(finances.length);
+ console.log("Average  Change: " +averageChangeInProfitLoss.toFixed(2));
+
+
+// The greatest increase in profits (date and amount) over the entire period.
+
+let greatestIncreaseInProfit=finances[1][1]-finances[0][1];
+for (let i= 1; i < (finances.length-2); i++) {
+    
+    if (greatestIncreaseInProfit>finances[i+1][1]-finances[i][1]) {
+        greatestIncreaseInProfit=greatestIncreaseInProfit;
+        }
+        else {
+            greatestIncreaseInProfit=(finances[i+1][1]-finances[i][1])
+        } ;
+    
+};
+
+
+
+ console.log(greatestIncreaseInProfit)
