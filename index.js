@@ -87,6 +87,26 @@ let
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
-
+// Number of months
 let numberOfMonths =finances.length
-console.log("total Months: "+numberOfMonths)
+console.log("Total Months: "+numberOfMonths)
+
+//The net total amount of Profit/Losses over the entire period.
+
+
+let netTotalOfProfitLosses=0
+for (let i = 0; i < finances.length; i++) {
+    
+netTotalOfProfitLosses=finances[i][1]+netTotalOfProfitLosses
+
+}
+
+console.log("Total:"+ "$"+netTotalOfProfitLosses)
+
+//The average of the **changes** in Profit/Losses over the entire period.
+
+let i=1
+let changeInProfitLoss=0
+ changeInProfitLoss=changeInProfitLoss+(finances[i][1]-finances[i-1][1])
+
+ console.log(changeInProfitLoss)
