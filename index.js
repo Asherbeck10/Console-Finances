@@ -89,7 +89,7 @@ let
 ];
 // Number of months
 let numberOfMonths =finances.length
-console.log("Total Months: "+numberOfMonths)
+console.log("Total Months: "+numberOfMonths);
 
 //The net total amount of Profit/Losses over the entire period.
 
@@ -97,16 +97,23 @@ console.log("Total Months: "+numberOfMonths)
 let netTotalOfProfitLosses=0
 for (let i = 0; i < finances.length; i++) {
     
-netTotalOfProfitLosses=finances[i][1]+netTotalOfProfitLosses
+netTotalOfProfitLosses=finances[i][1]+netTotalOfProfitLosses;
 
-}
+};
 
-console.log("Total:"+ "$"+netTotalOfProfitLosses)
+console.log("Total:"+ "$"+netTotalOfProfitLosses);
 
 //The average of the **changes** in Profit/Losses over the entire period.
 
-let i=1
-let changeInProfitLoss=0
- changeInProfitLoss=changeInProfitLoss+(finances[i][1]-finances[i-1][1])
 
- console.log(changeInProfitLoss)
+let changeInProfitLoss=0;
+
+for (let i = 0; i < (finances.length-1); i++) {
+    changeInProfitLoss=changeInProfitLoss+(finances[i+1][1]-finances[i][1]);
+    
+};
+ 
+averChangeInProfitLos=changeInProfitLoss/(finances.length)
+ console.log(averChangeInProfitLos.toFixed(2));
+
+ 
