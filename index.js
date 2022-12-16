@@ -113,8 +113,7 @@ for (let i = 0; i < (finances.length-1); i++) {
     
 };
 
- //The average of the **changes** in Profit/Losses over the entire period.
-let averageChangeInProfitLoss=changeInProfitLoss/(finances.length);
+let averageChangeInProfitLoss=changeInProfitLoss/(finances.length-1);
  console.log("Average  Change: " +averageChangeInProfitLoss.toFixed(2));
 
 
