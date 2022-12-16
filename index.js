@@ -87,6 +87,10 @@ let
         ['Jan-2017', 138230],
         ['Feb-2017',671099]
     ];
+
+
+console.log("Financial Analysis \n----------------------------")
+
 // Number of months
 let numberOfMonths = finances.length;
 console.log("Total Months: " + numberOfMonths);
@@ -120,7 +124,7 @@ console.log("Average  Change: " + "$" +averageChangeInProfitLoss.toFixed(2));
 // The greatest increase in profits (date and amount) over the entire period.
 
 let greatestIncreaseInProfit = finances[1][1] - finances[0][1];
-let x = 0;
+
 for (let i = 0; i < (finances.length - 1); i++) {
 
     if (greatestIncreaseInProfit > finances[i + 1][1] - finances[i][1]) {
@@ -130,7 +134,7 @@ for (let i = 0; i < (finances.length - 1); i++) {
     }
     else {
         greatestIncreaseInProfit = (finances[i + 1][1] - finances[i][1])
-        date = finances[i+1][0]
+        date = finances[i+1][0];
     };
 
 };
@@ -138,3 +142,21 @@ for (let i = 0; i < (finances.length - 1); i++) {
 console.log("Greatest Increase in Profits:"+date+" "+"($"+greatestIncreaseInProfit+")");
 
 
+//The greatest decrease in losses (date and amount) over the entire period.
+let greatestDecreaseInProfit = finances[1][1] - finances[0][1];
+
+for (let i = 0; i < (finances.length - 1); i++) {
+
+    if (greatestDecreaseInProfit < finances[i + 1][1] - finances[i][1]) {
+        greatestDecreaseInProfit = greatestDecreaseInProfit;
+        
+
+    }
+    else {
+        greatestDecreaseInProfit = (finances[i + 1][1] - finances[i][1])
+        date = finances[i+1][0];
+    };
+
+};
+
+console.log("Greatest Decrease in Profits:"+date+" "+"($"+greatestDecreaseInProfit+")");
