@@ -159,4 +159,4 @@ for (let i = 0; i < (finances.length - 1); i++) {
 
 };
 
-console.log("Greatest Decrease in Profit:"+date+" "+"($"+greatestDecreaseInProfit+")");
+console.log("Greatest Decrease in Profits:"+date+" "+"($"+greatestDecreaseInProfit+")");
