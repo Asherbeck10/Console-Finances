@@ -101,7 +101,7 @@ console.log("Total Months: " + numberOfMonths);
 let netTotalOfProfitLosses = 0
 for (let i = 0; i < finances.length; i++) {
 
-    netTotalOfProfitLosses = finances[i][1] + netTotalOfProfitLosses;
+    netTotalOfProfitLosses += finances[i][1] 
 
 };
 
