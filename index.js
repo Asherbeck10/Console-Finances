@@ -92,11 +92,12 @@ let
 console.log("Financial Analysis \n----------------------------")
 
 // Number of months
+
 let numberOfMonths = finances.length;
 console.log("Total Months: " + numberOfMonths);
 
-//The net total amount of Profit/Losses over the entire period.
 
+//The net total amount of Profit/Losses over the entire period.
 
 let netTotalOfProfitLosses = 0
 for (let i = 0; i < finances.length; i++) {
@@ -107,10 +108,11 @@ for (let i = 0; i < finances.length; i++) {
 
 console.log("Total:" + "$" + netTotalOfProfitLosses);
 
+
 //The average of the **changes** in Profit/Losses over the entire period.
 
-
 let changeInProfitLoss = 0;
+let date=0;
 
 for (let i = 0; i < (finances.length - 1); i++) {
     changeInProfitLoss = changeInProfitLoss + (finances[i + 1][1] - finances[i][1]);
@@ -121,9 +123,11 @@ let averageChangeInProfitLoss = changeInProfitLoss / (finances.length - 1);
 console.log("Average  Change: " + "$" +averageChangeInProfitLoss.toFixed(2));
 
 
+
 // The greatest increase in profits (date and amount) over the entire period.
 
 let greatestIncreaseInProfit =0;
+
 
 for (let i = 0; i < (finances.length - 1); i++) {
 
@@ -143,6 +147,7 @@ console.log("Greatest Increase in Profits:"+date+" "+"($"+greatestIncreaseInProf
 
 
 //The greatest decrease in losses (date and amount) over the entire period.
+
 let greatestDecreaseInProfit =0;
 
 for (let i = 0; i < (finances.length - 1); i++) {
