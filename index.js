@@ -123,7 +123,7 @@ console.log("Average  Change: " + "$" +averageChangeInProfitLoss.toFixed(2));
 
 // The greatest increase in profits (date and amount) over the entire period.
 
-let greatestIncreaseInProfit = finances[1][1] - finances[0][1];
+let greatestIncreaseInProfit =0;
 
 for (let i = 0; i < (finances.length - 1); i++) {
 
@@ -143,7 +143,7 @@ console.log("Greatest Increase in Profits:"+date+" "+"($"+greatestIncreaseInProf
 
 
 //The greatest decrease in losses (date and amount) over the entire period.
-let greatestDecreaseInProfit = finances[1][1] - finances[0][1];
+let greatestDecreaseInProfit =0;
 
 for (let i = 0; i < (finances.length - 1); i++) {
 
