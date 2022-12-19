@@ -112,7 +112,7 @@ console.log("Total:" + "$" + netTotalOfProfitLosses);
 //The average of the **changes** in Profit/Losses over the entire period.
 
 let changeInProfitLoss = 0;
-let date=0;
+
 
 for (let i = 0; i < (finances.length - 1); i++) {
     changeInProfitLoss = changeInProfitLoss + (finances[i + 1][1] - finances[i][1]);
@@ -126,7 +126,8 @@ console.log("Average  Change: " + "$" +averageChangeInProfitLoss.toFixed(2));
 
 // The greatest increase in profits (date and amount) over the entire period.
 
-let greatestIncreaseInProfit =0;
+let greatestIncreaseInProfit =finances[1][1]-finances[0][1];
+let date=[1][0];
 
 
 for (let i = 0; i < (finances.length - 1); i++) {
@@ -148,7 +149,7 @@ console.log("Greatest Increase in Profits:"+date+" "+"($"+greatestIncreaseInProf
 
 //The greatest decrease in losses (date and amount) over the entire period.
 
-let greatestDecreaseInProfit =0;
+let greatestDecreaseInProfit =finances[1][1]-finances[0][1];
 
 for (let i = 0; i < (finances.length - 1); i++) {
 
